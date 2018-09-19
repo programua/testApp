@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form(action='/' method='post')
+    input(type='text' name='name' placeholder='name')
+    div
+      input(type='text' name='text' placeholder='message')
+      div
+        input(type='submit' value='send' name='sendBtn')
+
+  div(id='workspace')
+    script(src='../ssr.js')
