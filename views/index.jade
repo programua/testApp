@@ -8,5 +8,9 @@ block content
       div
         input(type='submit' value='send' name='sendBtn')
 
+  form(action='/upload' method='post')
+    input(type='file')
+    div
+      input(type='submit' value='send image' name='sendImg')
   div(id='workspace')
     script(src='../ssr.js')
