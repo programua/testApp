@@ -198,6 +198,7 @@ h6 {
   background: rgba(52, 58, 64, 0.5);
   line-height: 50px;
   z-index: 999;
+  border-radius: .25em;
 }
 
 .menu-toggle:focus, .menu-toggle:hover {
@@ -206,6 +207,11 @@ h6 {
 
 .menu-toggle:hover {
   background: #343a40;
+}
+
+.fas {
+  text-align: center;
+  font-size: 1rem;
 }
 
 .service-icon {
