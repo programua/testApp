@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  form(action='/upload' method='post' enctype='multipart/form-data')
+    input(type='file' name='testImage')
+    div
+      input(type='submit' value='send image' name='sendImg')
+  div(id='workspace')
