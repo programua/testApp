@@ -1,12 +1,13 @@
 extends layout
 
 block content
-  form(action='/message' method='post')
-    input(type='text' name='name' placeholder='name')
-    div
-      input(type='text' name='text' placeholder='message')
+  div(class='container')
+    form(action='/message',method='post')
+      input(type='text',name='name',placeholder='name')
       div
-        input(type='submit' value='send' name='sendBtn')
-  form(action='/upload')
-    input(type='submit' value='to upload page')
-    //- script(src='../ssr.js')
+        input(type='text',name='text',placeholder='message')
+        div
+          input(type='submit',value='send',name='sendBtn',class='btn btn-primary btn-xl')
+    form(action='/upload')
+      input(type='submit',value='to upload page',class='btn btn-primary')
+      //- script(src='../ssr.js')
