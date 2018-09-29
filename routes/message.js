@@ -10,7 +10,7 @@ router.post('/',function(req, res){
         userName: req.body.name
     });
     let message = new messageModel({
-        message: req.body.text
+        message: req.body.message
     });
 
     user.save(function(err){
@@ -19,6 +19,7 @@ router.post('/',function(req, res){
     message.save(function(err){
         if(err) throw err;
     });
+    res.redirect('/');
 });
 
 module.exports = router;
