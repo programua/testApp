@@ -12,12 +12,16 @@ html {
 
 body {
   font-family: 'Source Sans Pro';
+  background-color: #e5b023;
 }
 
 .btn-xl {
   padding: 1.25rem 2.5rem;
 }
 
+.btn-x {
+  padding: 0.7rem 2.5rem;
+}
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;

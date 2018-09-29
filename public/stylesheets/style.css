@@ -1,8 +1,18 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+} 
+/*
 a {
   color: #00B7FF;
+} */
+
+#input-box {
+  border-radius: .25rem;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.form-first {
+  /* padding-bottom: 10px; */
 }
