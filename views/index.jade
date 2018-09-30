@@ -12,4 +12,14 @@ block content
       input(type='submit',value='to upload page',class='btn btn-primary')
   a(class='menu-toggle rounded', href='#')
     i(class='fas fa-bars')
-      //- script(src='../ssr.js')
+  nav(id='sidebar-wrapper',class='active')
+    ul(calss='sidebar-nav')
+      li(class='sidebar-brand')
+        a(calss='js-scroll-triggr',href='#page-top') menu
+      li(class='sidebar-nav-item')
+        a(class='js-scroll-trigger',href='http://localhost:8080/upload') data upload
+  //- 静的ファイルの読み込みはpublicディレクトリから行われるようなので
+  //- パスを記載するときは /public/css ~ ではなく /css~ とする
+  script(src='/vendor/jquery/jquery.min.js')
+  script(src='/javascripts/stylish-portfolio.min.js')
+        //- script(src='../ssr.js')
