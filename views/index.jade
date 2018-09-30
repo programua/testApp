@@ -1,23 +1,26 @@
 extends layout
 
 block content
-  div(class='container')
-    form(action='/message',method='post',class='form-first')
-      input(type='text',name='name',id='input-box',placeholder='name')
-      div
-        input(type='text',name='text',id='input-box',placeholder='message')
+  div.container-fruid
+    div.row
+      form.form-first(action='/message',method='post')
+        input#input-box(type='text',name='name',placeholder='name')
         div
-          input(type='submit',value='send',name='sendBtn',class='btn btn-primary btn-x')
-    form(action='/upload',class='form-second')
-      input(type='submit',value='to upload page',class='btn btn-primary')
-  a(class='menu-toggle rounded', href='#')
-    i(class='fas fa-bars')
-  nav(id='sidebar-wrapper',class='')
-    ul(calss='sidebar-nav')
-      li(class='sidebar-brand')
-        a(calss='js-scroll-triggr',href='#page-top') menu
-      li(class='sidebar-nav-item')
-        a(class='js-scroll-trigger',href='http://localhost:8080/upload') data upload
+          input#input-box(type='text',name='text',placeholder='message')
+          div
+            input.btn.btn-primary.btn-x(type='submit',value='send',name='sendBtn')
+      form.form-second(action='/upload')
+        input.btn.btn-primary(type='submit',value='to upload page')
+    a.menu-toggle.rounded(href='#')
+      i.fas.fa-bars
+    nav#sidebar-wrapper
+      ul.sidebar-nav
+        li.sidebar-brand
+          a.js-scroll-triggr(href='#page-top') menu
+        li.sidebar-nav-item
+          a.js-scroll-trigger(href='/upload') data upload
+    div.row.col-lg-10.mx-auto#second-section
+      p hogehoge
   //- 静的ファイルの読み込みはpublicディレクトリから行われるようなので
   //- パスを記載するときは /public/css ~ ではなく /css~ とする
   script(src='/vendor/jquery/jquery.min.js')
