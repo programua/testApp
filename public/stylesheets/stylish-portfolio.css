@@ -13,6 +13,7 @@ html {
 body {
   font-family: 'Source Sans Pro';
   background-color: #e5b023;
+  text-align: center;
 }
 
 .btn-xl {
@@ -25,6 +26,7 @@ body {
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
+  text-align: center !important;
 }
 
 .content-section-heading h2 {

@@ -43,6 +43,7 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
+// connect mongodb
 app.listen(process.env.port || 8000);
 mongoose.connect('mongodb://localhost/testApp', { useNewUrlParser: true });
 

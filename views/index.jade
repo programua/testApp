@@ -1,16 +1,17 @@
 extends layout
 
 block content
-  div.container-fruid
-    div.row
+  div.content-section.text-center
+    div.row.col-xl-12.mx-auto
       form.form-first(action='/message',method='post')
         input#input-box(type='text',name='name',placeholder='name')
         div
           input#input-box(type='text',name='text',placeholder='message')
           div
             input.btn.btn-primary.btn-x(type='submit',value='send',name='sendBtn')
-      form.form-second(action='/upload')
-        input.btn.btn-primary(type='submit',value='to upload page')
+    //- div.row
+    //-   form.form-second(action='/upload')
+    //-     input.btn.btn-primary(type='submit',value='to upload page')
     a.menu-toggle.rounded(href='#')
       i.fas.fa-bars
     nav#sidebar-wrapper
@@ -19,7 +20,7 @@ block content
           a.js-scroll-triggr(href='#page-top') menu
         li.sidebar-nav-item
           a.js-scroll-trigger(href='/upload') data upload
-    div.row.col-lg-10.mx-auto#second-section
+    div.row.col-lg-12.text-center.mx-auto#second-section
       p hogehoge
   //- 静的ファイルの読み込みはpublicディレクトリから行われるようなので
   //- パスを記載するときは /public/css ~ ではなく /css~ とする
