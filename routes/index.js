@@ -5,15 +5,17 @@ let messageModel = require('../schemas/messages').Message;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-findArticles();
-  res.render('index', { title: 'Express' });
+  findArticles(function(data){
+    console.log(data);
+    res.render('index', { data: data });
+  });
 });
 
-let findArticles = function(){
+let findArticles = function(callback){
   messageModel.find({},{limit:5})
-    .populate('unit')
-    .exec(function(err, data){
-      console.log(data);
+  .populate('unit')
+    .exec(function(err, result){
+      callback(result);
     })
 };
 
