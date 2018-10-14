@@ -4,19 +4,8 @@ let userModel = require('../schemas/users').User;
 let messageModel = require('../schemas/messages').Message;
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  findArticles(function(data){
-    console.log(data);
-    res.render('index', { data: data });
-  });
+router.get('/', function (req, res, next) {
+    res.render('index');
 });
-
-let findArticles = function(callback){
-  messageModel.find({},{limit:5})
-  .populate('unit')
-    .exec(function(err, result){
-      callback(result);
-    })
-};
 
 module.exports = router;

@@ -7,7 +7,7 @@ let userModel = require('../schemas/users').User;
 let messageModel = require('../schemas/messages').Message;
 
 // messsageとuserデータをdbに登録
-router.post('/',function(req, res){
+router.post('/regist',function(req, res){
     let User = new userModel({
         _id: new mongoose.Types.ObjectId(),
         userName: req.body.name,
@@ -30,6 +30,17 @@ router.post('/',function(req, res){
     });
 
     res.redirect('/');
+});
+
+router.post('/getList',function(req, res){
+    (function(){
+        messageModel.find({},{limit:5})
+        .populate('unit')
+        .exec(function(err, result){
+            console.log(result);
+            res.json(result);
+        })
+    })();  
 });
 
 module.exports = router;

@@ -3,7 +3,7 @@ extends layout
 block content
   div.content-section.text-center
     div.row.col-xl-12.mx-auto
-      form.form-first(action='/message',method='post')
+      form.form-first(action='/message/regist',method='post')
         input#input-box(type='text',name='name',placeholder='name')
         div
           input#input-box(type='text',name='text',placeholder='message')
@@ -21,9 +21,17 @@ block content
         li.sidebar-nav-item
           a.js-scroll-trigger(href='/upload') data upload
     div.row.col-lg-12.text-center.mx-auto#second-section
-      p hogehoge
+      table.table-list
+        tr.message-list
+          th
+          th
+      //- each article in item
+      //-   p= article.userName
+
+
   //- 静的ファイルの読み込みはpublicディレクトリから行われるようなので
   //- パスを記載するときは /public/css ~ ではなく /css~ とする
   script(src='/vendor/jquery/jquery.min.js')
   script(src='/javascripts/stylish-portfolio.min.js')
+  script(src='/javascripts/articles.js')
         //- script(src='../ssr.js')
